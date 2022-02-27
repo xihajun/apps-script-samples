@@ -17,6 +17,9 @@
 /**
  * @OnlyCurrentDoc Adds progress bars to a presentation.
  */
+/**
+ * @OnlyCurrentDoc Adds progress bars to a presentation.
+ */
 const BAR_ID = 'PROGRESS_BAR_ID';
 const BAR_HEIGHT = 10; // px
 
@@ -58,6 +61,8 @@ function createBars() {
     if (barWidth > 0) {
       const bar = slides[i].insertShape(SlidesApp.ShapeType.RECTANGLE, x, y,
           barWidth, BAR_HEIGHT);
+      /** add dark bar example **/
+      bar.getFill().setSolidFill('#0D0C27');
       bar.getBorder().setTransparent();
       bar.setLinkUrl(BAR_ID);
     }
